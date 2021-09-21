@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+#include <string>
+#include <vector>
+  using namespace std;
+  
+ int converttobinary(int x){ queue <int> q;
+      vector <int> bit;
+   while(x>0){
+       bit.push_back(x%2);
+       
+       x/=2;
+   }
+   for(int i=bit.size()-1;i>=0;--i){
+       int c=(bit.at(i));
+       q.push(c);
+   }
+   while(!q.empty()){
+       cout<<q.front();
+       q.pop();
+     }
+   cout<<" ";
+ }
+  int main()
+  {
+    //write your code here
+    int t;
+    cin>>t;
+    while(t--){
+      int n;cin>>n; queue <int> q;
+     int x=0,i;
+      for(i=0;i<n;i++){
+        x+=1;
+       // q.push(x);
+       converttobinary(x);
+       
+      }
+     
+   cout<<'\n';
+    }
+    return 0;
+  }
